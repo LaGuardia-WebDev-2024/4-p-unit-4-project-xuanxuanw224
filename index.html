@@ -17,30 +17,127 @@ Select ONE Additional Feature to Add
 <html>
 
 <head>
-  <title>Unit 4 Project</title>
+  <title>My Arcane Timeline</title>
   <meta charset="utf-8">
   <style>
+body {
+  background-image: url(arcane-jayce-4k-wallpaper-uhdpaper.com-152@2@c.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.poo {
+width: 800px;
+}
+
+
+  table { width: 800px; height: 1050px;
+  background-color: rgba(194, 207, 211, 0.542); border-radius: 25px;}
+
+  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbbbbb00;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: rgb(229, 220, 194);
+  border-radius: 25px;
+  color: rgb(203, 166, 45);
+  transform: rotateY(180deg);
+}
+
 
   </style>
+
+ 
+
 </head>
 <body>
-
-  <h1>My Unofficial Local Guide to [~~~]</h1>
   
-  <h3>Content Element 1</h3>
-  <hr>
-  <p>About Content Element #1</p>
+<center>
+  <h1>My Arcane Timeline</h1>
+  
+  <h3>Setting</h3>
+  <hr> 
+  <p class="poo">After Vikter was actually successful in accomplishing his glorious evolution, (Ekko falled :c), much of Piltover and Zaun was evolved. Except, instead of becoming the same soldier-like forms that was Ambessa's army, they still kept a bit of themselves, each individually unique based on a person's characteristics and personality. Viktor went back to zaun with evolved Jayce to keep trying to improve the nation that he now rules. <br> Uriel was a pilty that had origins from Zaun, much like Vikter. He grew up with kat & was often protected by them in the past. But as Uriel strove for more in the glistening buildings of Piltover. Kat didn't see the same vision. Thinking ill of Piltover like evenyone else, and rightfully so.
+
+  </p>
   <br><br>
 
-  <h3>Content Element 2</h3>
+  <h3>Characters</h3>
   <hr>
-  <p>About Content Element #2</p>
+  <table>
+    <body>
+        <tr> 
+          <td>
+          
+           <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/109852668_1Skf4KswYUudKOR.png" alt="Avatar" style="width:400px;">
+    </div>
+    <div class="flip-card-back">
+      <img src="">
+      <h1>Uriel</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+          
+          
+          
+          </td>
+          <td> Uriel: Traveled to Piltover for an education in the arts and medicine, aiming to become a herbalist that can cure the rampant diseases in zaun caused by the smoke. Perhaps a soothing tea of sorts. when he first caught wind of Vikter evolving people he was super on board with the idea, and I guess he still is. He hated shimmer. Even though he wasn't able do visit Viktor's commune because travel across the bndge was near impossible, he welcomed the transfermaton when</td>
+        </tr>
+        <tr>
+          <td><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> Kat: el: Traveled to Piltover for an education in the arts and medicine, aiming to become a herbalist that can cure the rampant diseases in zaun caused by the smoke. Perhaps a soothing tea of sorts. when he first caught wind of Vikter evolving people he was super on board with the idea, and I guess he still is. He hated shimmer. Even though he wasn't able do visit Viktor's commune because travel across the bndge was near impossible, he welcomed the transfermaton when </td>
+          <td><img src="https://f2.toyhou.se/file/f2-toyhou-se/images/95910399_8koMn1ma4DQN6rz.png" width="350"></td>
+        </tr>
+    </body>
+  </table>
+  <p>
+ </p>
   <br><br>
 
-  <h3>Content Element 3</h3>
+  <h3>Story</h3>
   <hr>
   <p>About Content Element #3</p>
   <br><br>
-
+</center>
 </body>
 </html>
