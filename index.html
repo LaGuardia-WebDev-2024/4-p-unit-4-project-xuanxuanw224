@@ -1,7 +1,7 @@
 <!--Unit 4 Project
 Requirements
-[ ] Three Distinct CSS font-family Declarations
-[ ] One Google Font or Uploaded Font
+[ yes ] Three Distinct CSS font-family Declarations
+[ yes ] One Google Font or Uploaded Font
 [ ] An Unordered **or** Ordered List (<ul> or <ol>)
 [ ] Three Images
 
@@ -19,6 +19,15 @@ Select ONE Additional Feature to Add
 <head>
   <title>My Arcane Timeline</title>
   <meta charset="utf-8">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sono:wght@200..800&display=swap" rel="stylesheet">
+
   <style>
 body {
   background-image: url(arcane-jayce-4k-wallpaper-uhdpaper.com-152@2@c.jpg);
@@ -28,21 +37,67 @@ body {
 
 .poo {
 width: 800px;
+background-color: rgba(194, 207, 211, 0.542); border-radius: 25px;
+    padding : 20px;
+    color: rgb(29, 42, 56);
+  font-family: "Sono", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "MONO" 1;
 }
 
 
-  table { width: 800px; height: 1050px;
-  background-color: rgba(194, 207, 211, 0.542); border-radius: 25px;}
 
-  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+#up {
+  transform: translateY(-130px);
+}
+
+#down {
+  transform: translateY(100px);
+  color: rgb(29, 42, 56);
+  font-family: "Sono", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "MONO" 1;
+}
+
+.yuhh {
+  color: rgb(29, 42, 56);
+  font-family: "Sono", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "MONO" 1;
+}
+
+.muffin {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(148, 124, 76);
+  font-size: 30px;
+}
+
+.foosh {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+  table { width: 800px; height: 1050px;
+  background-color: rgba(194, 207, 211, 0.542); border-radius: 25px;
+    padding : 20px;
+}
+
 .flip-card {
   background-color: transparent;
   width: 300px;
   height: 200px;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
-/* This container is needed to position the front and back side */
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -52,27 +107,22 @@ width: 800px;
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
+
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
+  
 }
 
-/* Position the front and back side */
+
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  background-color: #bbbbbb00;
-  color: black;
-}
 
-/* Style the back side */
 .flip-card-back {
   background-color: rgb(229, 220, 194);
   border-radius: 25px;
@@ -80,7 +130,70 @@ width: 800px;
   transform: rotateY(180deg);
 }
 
+.flip-card-front1, .flip-card-back1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
+}
 
+.flip-card-back1 {
+  background-color: rgb(251, 176, 186);
+  border-radius: 25px;
+  color: rgb(255, 234, 248);
+  transform: rotateY(180deg);
+}
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #82b2ae 0%,
+    #f78dc5 29%,
+    #eea9f4 67%,
+    #fff8c2 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 100px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.bookends {
+  position: relative;
+  border-width: 5px;
+  border-color: rgb(148, 124, 76) transparent;
+  height: 11px;
+  border-style: double;
+  width: 20%;
+}
+.bookends:before,
+.bookends:after {
+  position: absolute;
+  bottom: -3.536px;
+  width: 7.071px;
+  height: 7.071px;
+  display: block;
+  border-width: 0 7.071px 7.071px 0;
+  border-color: rgb(148, 124, 76);
+  border-style: double;
+  box-sizing: border-box;
+}
   </style>
 
  
@@ -89,44 +202,60 @@ width: 800px;
 <body>
   
 <center>
-  <h1>My Arcane Timeline</h1>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h3 class="animate-charcter"> My Arcane Timeline</h3>
+    </div>
+  </div>
+</div>
   
-  <h3>Setting</h3>
-  <hr> 
-  <p class="poo">After Vikter was actually successful in accomplishing his glorious evolution, (Ekko falled :c), much of Piltover and Zaun was evolved. Except, instead of becoming the same soldier-like forms that was Ambessa's army, they still kept a bit of themselves, each individually unique based on a person's characteristics and personality. Viktor went back to zaun with evolved Jayce to keep trying to improve the nation that he now rules. <br> Uriel was a pilty that had origins from Zaun, much like Vikter. He grew up with kat & was often protected by them in the past. But as Uriel strove for more in the glistening buildings of Piltover. Kat didn't see the same vision. Thinking ill of Piltover like evenyone else, and rightfully so.
+  <h3 class="muffin">Setting</h3>
+  <hr class="bookends"> 
+  <p class="poo">After Vikter was actually successful in accomplishing his glorious evolution, (Ekko failed :c), much of Piltover and Zaun became evolved. Except, instead of becoming the same soldier-like forms that was Ambessa's army, they still kept a bit of themselves, each individually unique based on a person's characteristics and personality. Viktor went back to zaun with evolved Jayce to keep trying to improve the nation that he now rules. <br> Uriel was a pilty that had origins from Zaun, much like Vikter. He grew up with kat & was often protected by them in the past. But as Uriel strove for more in the glistening buildings of Piltover. Kat didn't see the same vision. Thinking ill of Piltover like almost every other zaunite, and rightfully so.
 
   </p>
   <br><br>
 
-  <h3>Characters</h3>
-  <hr>
+  <h3 class="muffin">Characters</h3>
+  <hr class="bookends">
   <table>
     <body>
         <tr> 
           <td>
-          
            <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
       <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/109852668_1Skf4KswYUudKOR.png" alt="Avatar" style="width:400px;">
     </div>
     <div class="flip-card-back">
-      <img src="">
-      <h1>Uriel</h1>
-      <p>Architect & Engineer</p>
-      <p>We love that guy</p>
+      <h1 class="foosh">Uriel</h1>
+      <p class="foosh">He/Him</p>
+      <p class="foosh">Introverted ~ Pilty ~ Herbalist</p>
     </div>
   </div>
 </div>
           
-          
-          
           </td>
-          <td> Uriel: Traveled to Piltover for an education in the arts and medicine, aiming to become a herbalist that can cure the rampant diseases in zaun caused by the smoke. Perhaps a soothing tea of sorts. when he first caught wind of Vikter evolving people he was super on board with the idea, and I guess he still is. He hated shimmer. Even though he wasn't able do visit Viktor's commune because travel across the bndge was near impossible, he welcomed the transfermaton when</td>
+          <td id="down"> Uriel: Traveled to Piltover for an education in the arts and medicine, aiming to become a herbalist that can cure the rampant diseases in Zaun caused by the horrible air quality. Perhaps a soothing tea of sorts. When he first caught wind of Vikter evolving people he was super on board with the idea, and I guess he still is. He hated shimmer. Even though he wasn't able do visit Viktor's commune because travel across the bridge was near impossible, he welcomed the transfermaton when it did occur, leaving most of his inner self intact. 
+            
+          </td>
         </tr>
         <tr>
-          <td><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> Kat: el: Traveled to Piltover for an education in the arts and medicine, aiming to become a herbalist that can cure the rampant diseases in zaun caused by the smoke. Perhaps a soothing tea of sorts. when he first caught wind of Vikter evolving people he was super on board with the idea, and I guess he still is. He hated shimmer. Even though he wasn't able do visit Viktor's commune because travel across the bndge was near impossible, he welcomed the transfermaton when </td>
-          <td><img src="https://f2.toyhou.se/file/f2-toyhou-se/images/95910399_8koMn1ma4DQN6rz.png" width="350"></td>
+          <td class="yuhh"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> Kat: el: Traveled to Piltover for an education in the arts and medicine, aiming to become a herbalist that can cure the rampant diseases in zaun caused by the smoke. Perhaps a soothing tea of sorts. when he first caught wind of Vikter evolving people he was super on board with the idea, and I guess he still is. He hated shimmer. Even though he wasn't able do visit Viktor's commune because travel across the bndge was near impossible, he welcomed the transfermaton when </td>
+
+          <td id="up"> 
+            <div class="flip-card">
+            <div class="flip-card-inner">
+            <div class="flip-card-front1">
+      <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/95910399_8koMn1ma4DQN6rz.png" alt="Avatar" style="width:350px;">
+            </div>
+            <div class="flip-card-back1">
+      <h1 class="foosh">Kat</h1>
+      <p class="foosh">She/They</p>
+      <p class="foosh">Extroverted ~ Zaunite ~ Blacksmith</p>
+          </td>
         </tr>
     </body>
   </table>
@@ -134,9 +263,17 @@ width: 800px;
  </p>
   <br><br>
 
-  <h3>Story</h3>
-  <hr>
-  <p>About Content Element #3</p>
+  <h3 class="muffin">Story</h3>
+  <hr class="bookends">
+  <p class="poo">Deep underground in the remote ruins of Zaun was a forge, a secret hideout for one who didn’t want to be found. The wild foliage breathed and the river of sewage pumped. Kat eventually came to believe it was the only place left in Zaun that hadn’t been tainted by that damned herald. They were the only survivor. High above in the overrun streets of piltover bustled a serene crowd of the evolved. People- or so they seem at least, carried on with their lives in peace as if nothing had happened at all. Uriel leapt through the buildings in newfound freedom, freedom from the herald he so wished to meet. His savior. 
+
+	The wind combed through Uriel’s hair which he was glad survived the transformation. However pleased he was with his new form, infinitely more durable and all, he hoped to not lose his favorite feature. It wasn’t hard for him to get used to it at all; his pale skin was replaced by a ceramic like glaze, and his old unimpressive form touched up to a doll-like figure, similar to the other evolved individuals. His body became adorned with the gold and pastel patterns of the anomaly, the colors were dazzling. What he loved the most, and what was unique to him, was the mysterious plants that sprouted from his body. He needed to sit down and study them as soon as he had a chance. 
+
+	But he hasn’t had a chance, not a single breath of free time relapsed for him since the glorious evolution happened not long ago. Not a single moment passed where he wasn’t moving, running to find his best friend that he’d foolishly left behind. 
+
+	Drip “Uriel doesn’t make mistakes.” drip “He’s too reasonable for his own good.” drip “For my own good…” drip 
+	
+</p>
   <br><br>
 </center>
 </body>
